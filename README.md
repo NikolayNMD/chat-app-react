@@ -1,6 +1,6 @@
 # Chat App
 
-Цей проект було створено за допомогою Vite.
+This project was created using Vite.
 
 ## 🚀 How to Run the Project
 
@@ -29,3 +29,24 @@
 ```
 
 - Then open: http://localhost:5173/chat-app-react
+
+## 💬 How Auto-Scroll is Implemented
+
+After each new message is added, the chat automatically scrolls to the newest message.
+
+This is achieved using:
+
+- `useRef` to reference the last message element.
+- `useEffect` to call `.scrollIntoView({ behavior: 'smooth' })` whenever the list of messages changes.
+
+## 🛠 Why Zustand Was Chosen
+
+- Simplicity: Zustand has a minimalistic API and is much easier to set up compared to Redux.
+
+- No Boilerplate: Unlike Redux, Zustand requires no reducers, action types, or complex configuration.
+
+- Performance: Zustand updates only the components that use specific slices of the state, leading to better performance.
+
+- Built-in LocalStorage Support: Zustand can easily persist state (like chat history) into local storage.
+
+- Lightweight: Zustand is a small library (around 1KB gzipped), making it ideal for simple apps like a chat.
