@@ -58,25 +58,47 @@ html,
 }
 
 .message.user {
+  position: relative;
   display: flex;
   flex-direction: row-reverse;
   width: 100%;
 }
 
+.message.user .sender {
+  position: absolute;
+  font-size: 10px;
+  color: white;
+  top: 5px;
+  right: 10px;
+}
+
 .message.user .bubble {
   background: #007bff;
   color: white;
-  padding: 10px;
+  padding: 25px 10px 10px;
   border-radius: 10px 10px 0 10px;
+  min-width: 50px;
   max-width: 50%;
   word-break: break-word;
   overflow-wrap: break-word;
 }
 
+.message.bot {
+  position: relative;
+}
+
+.message.bot .sender {
+  position: absolute;
+  font-size: 10px;
+  top: 5px;
+  left: 10px;
+}
+
 .message.bot .bubble {
   background: #eee;
-  padding: 10px;
+  padding: 25px 10px 10px;
   border-radius: 10px 10px 10px 0;
+  min-width: 15px;
   max-width: 50%;
 }
 
